@@ -2,9 +2,136 @@
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
 
+@font-face {
+    font-family: rubik;
+    src: url('Rubik/Rubik-VariableFont_wght.ttf');
+    }
+
 body {
     text-rendering: optimizeLegibility;
+    background-color:#f5f5f5;
+    font-family: rubik;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 100px;
 }
+
+.kontejner {
+    display: flex;
+    justify-content: center;
+}
+
+.zbozi {
+    display: flex;
+    width: 670px;
+    height: 440px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.333); /*stín mi neobtéká celý flexbox - PROČ??? */
+    flex-wrap: wrap;
+}
+
+.vizual {
+    order: 1;
+    width: 50%;
+    background: linear-gradient(180deg,#06d7c1 0%, #50cc49 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 20px 0 0 20px;
+}
+
+.detaily {
+    order: 2;
+    width: 50%;
+    background-color: white;
+    color: black;
+    padding: 30px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.slogan {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.bota {
+    display: flex;
+    position: relative;
+    right: 120px;
+   }
+    
+.cenovka {
+    position: relative;
+    text-align: right;
+}
+
+.cena {
+    font-size: 28px;
+    font-weight: bold;
+    }
+
+.zaruka {
+    font-size: 12px;
+    font-weight: 400;
+}
+    
+.nazev {
+    text-transform: uppercase; 
+    font-size: 20px;
+    font-weight: bold; 
+}
+
+.produkt {
+    color: #959595;
+}
+
+.popis {
+    padding: 30px 0px 30px 0px;
+}
+
+.parametr {
+    text-transform: uppercase;
+    font-size: 14px;
+    border-top: solid 2px #06d7c1;
+    padding-top: 30px;
+}
+
+.velikosti {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.vybrana {
+    color: #f15f42;
+    border: solid 1px  #f15f42;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.tlacitko{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    text-transform: uppercase;  
+    background-color: #f15f42;
+    color: white;
+    margin-top: 80px;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.333);
+
+    }
+
+
+
+
+
+
+
+
 
 /*
  BARVY
