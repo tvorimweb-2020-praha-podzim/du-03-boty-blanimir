@@ -25,9 +25,9 @@ body {
     display: flex;
     width: 670px;
     height: 440px;
-    border-radius: 20px;
-    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.333); /*stín mi neobtéká celý flexbox - PROČ??? */
-    flex-wrap: wrap;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.333); 
+    flex-wrap: nowrap;
 }
 
 .vizual {
@@ -36,7 +36,8 @@ body {
     background: linear-gradient(180deg,#06d7c1 0%, #50cc49 100%);
     color: white;
     padding: 30px;
-    border-radius: 20px 0 0 20px;
+    border-radius: 10px 0 0 10px;
+    height: 440px;
 }
 
 .detaily {
@@ -45,7 +46,8 @@ body {
     background-color: white;
     color: black;
     padding: 30px;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 10px 10px 0px;
+    height: 440px;
 }
 
 .slogan {
@@ -54,7 +56,7 @@ body {
 }
 
 .bota {
-    display: flex;
+    flex-basis: content;
     position: relative;
     right: 120px;
    }
@@ -62,6 +64,7 @@ body {
 .cenovka {
     position: relative;
     text-align: right;
+    top: -50px; /*tohle asi není ideálí řešení, jak dostat text do levého dolního rohu - jak to jde lépe? */
 }
 
 .cena {
@@ -86,46 +89,61 @@ body {
 
 .popis {
     padding: 30px 0px 30px 0px;
+    border-bottom: solid 2px #06d7c1;
 }
 
 .parametr {
     text-transform: uppercase;
     font-size: 14px;
-    border-top: solid 2px #06d7c1;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
-.velikosti {
+.velikosti { 
     display: flex;
     list-style: none;
-    padding: 0px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    text-align: center;
+    
 }
-
+/*
 .vybrana {
     color: #f15f42;
     border: solid 1px  #f15f42;
     border-radius: 50%;
     padding: 4px;
 }
+*/
+
+li {
+    padding: 5px;
+    border: solid 1px transparent; /*tohle jsem okoukala na Tomášově konzultaci. Ale sama bych to nevymyslela. Jde tomu "skákání" po najetí kurzoru zamezit i jinak?*/
+}
+
+li:hover{
+    color: #f15f42;
+    border: solid 1px  #f15f42;
+    border-radius: 50%;
+}
+
 
 .tlacitko{
     display: flex;
     justify-content: center;
-    width: 200px;
+    width: 150px;
     text-transform: uppercase;  
     background-color: #f15f42;
     color: white;
-    margin-top: 80px;
+    margin-top: 30px;
     padding: 15px;
     text-decoration: none;
     border-radius: 5px;
     box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.333);
+ }
 
-    }
-
-
+ ul {
+    padding-inline-start: 0px;
+}
 
 
 
